@@ -131,7 +131,9 @@
 
                 <!-- Related Posts-->
                 <div class="col-md-4">
+                    <!-- component rtealated videos-->
                     <x-RelatedVideos :video="$video"></x-RelatedVideos>
+                    <!-- // component rtealated videos-->
                 </div><!-- // col-md-4 -->
                 <!-- // Related Posts -->
             </div><!-- // row -->

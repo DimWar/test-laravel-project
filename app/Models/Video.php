@@ -10,8 +10,12 @@ class Video extends Model {
     protected $fillable = [
         'thumbnail' , 'name' , 'slug' , 'description' ,'url' , 'created_at' , 'updated_at' , 'length'
     ];
-    public function getLengthAttribute($value){
-        return gmdate('H:i:s',$value);
+    public function getRouteKeyName()
+    {
+        return 'slug' ;
+    }
+    public function getLengthInHumanAttribute(){
+        return gmdate('H:i:s',$this->value);
     }
     
     public function getCreatedAtAttribute($value)
@@ -22,4 +26,8 @@ class Video extends Model {
     public function relatedVideos(int $count = 6){
         return Video::all()->random($count) ;
     }
+    public function findVideos(int $count = 6){
+        return Video::all() ;
+    }
+    
 }
