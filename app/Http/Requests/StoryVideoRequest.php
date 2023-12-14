@@ -27,7 +27,8 @@ class StoryVideoRequest extends FormRequest
             'length' => ['required','integer'],
             'url' => ['required' , 'url'],
             'slug' => ['required' ,'unique:videos,slug'],
-            'thumbnail' => ['required' ,'url']
+            'thumbnail' => ['required' ,'url'],
+            'description' => ['required']
         ];
     }
     protected function prepareForValidation(): void

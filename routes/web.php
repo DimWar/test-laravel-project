@@ -30,3 +30,5 @@ Route::post('/videos',[VideoController::class,'store'])->name('videos') ;
 Route::get('videos/{video:slug}',[VideoController::class,'show'])->name('videos.show');
 
 Route::get('videos/{video}/edit',[VideoController::class,'edit'])->name('videos.edit');
+
+Route::post('videos/{video}',[VideoController::class,'edited'])->name('videos.edited');

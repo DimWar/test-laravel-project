@@ -7,7 +7,7 @@
                     <!-- upload -->
                     <div class="col-md-8">
 						<h1 class="page-title"><span>آپلود</span> فیلم</h1>
-						<form action="/videos" method="post">
+						<form action="{{route('videos.edited',$video->slug)}}" method="post">
                             @csrf
                         	<div class="row">
                             	<div class="col-md-6">
@@ -32,7 +32,7 @@
                                 </div>
                             	<div class="col-md-12">
                                 	<label>@lang('video.description')</label>
-                                    <textarea class="form-control" name="description" rows="4" value="{{$video->description}}"  placeholder="@lang('video.description')"></textarea>
+                                    <textarea class="form-control" name="description" rows="4"   placeholder="@lang('video.description')">{{$video->description}}</textarea>
                                 </div>
                             	
                             	<div class="col-md-6">
