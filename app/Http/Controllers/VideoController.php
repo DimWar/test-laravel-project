@@ -30,7 +30,8 @@ class VideoController extends Controller{
     }
     
     public function edit(Video $video){
-        return view('videos.edit' , compact('video')) ;
+        $categories = category::all() ;
+        return view('videos.edit' , compact('video','categories')) ;
     }
     public function edited(UpdateVideoRequest $request , Video $video){
         $video->update($request->all()) ;

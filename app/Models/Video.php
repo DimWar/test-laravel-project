@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Video extends Model {
     use HasFactory ;
     protected $fillable = [
-        'thumbnail' , 'name' , 'slug' , 'description' ,'url' , 'created_at' , 'updated_at' , 'length' , 'category'
+        'thumbnail' , 'name' , 'slug' , 'description' ,'url' , 'created_at' , 'updated_at' , 'length' , 'category_id'
     ];
     public function getRouteKeyName()
     {
