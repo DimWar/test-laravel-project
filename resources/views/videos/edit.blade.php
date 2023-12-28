@@ -34,7 +34,7 @@
                                 	<label>@lang('video.category')</label>
                                     <select name="category_id" id="category" class="form-control">
                                         @foreach($categories as $category)
-                                        <option value="{{$category->id}}">{{$category->category}}</option>
+                                        <option value="{{$category->id}}" {{ $category->id == $video->category_id ? 'selected' : '' }} >{{$category->category}}</option>
                                         @endforeach
                                     </select>
                                 </div>
