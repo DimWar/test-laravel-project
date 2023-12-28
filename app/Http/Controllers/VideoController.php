@@ -35,7 +35,7 @@ class VideoController extends Controller{
     }
     public function edited(UpdateVideoRequest $request , Video $video){
         $video->update($request->all()) ;
-        return redirect()->route('index')->with('alert' , __('message.video_edietd')) ;
+        return redirect()->route('index')->with('alert' , __('messages.video_edietd')) ;
     }
     
 }
