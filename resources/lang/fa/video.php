@@ -7,5 +7,6 @@ return [
     'filme-upload' => 'اپلود فیلم' ,
     'thumbnail' => 'پیش نمایش ویدیو' ,
     'description' => 'توضیحات' ,
-    'save' => 'ذخیره'
+    'save' => 'ذخیره' ,
+    'category' => 'دسته بندی'
 ] ;

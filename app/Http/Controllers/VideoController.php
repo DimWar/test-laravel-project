@@ -3,6 +3,7 @@ namespace App\Http\Controllers ;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoryVideoRequest;
 use App\Http\Requests\UpdateVideoRequest;
+use App\Models\category;
 use App\Models\Video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
@@ -16,7 +17,8 @@ class VideoController extends Controller{
     }
 
     public function create(){
-        return view('videos.create') ;
+        $categories = category::all() ;
+        return view('videos.create' , compact('categories')) ;
     }
 
     public function store(StoryVideoRequest $request){        

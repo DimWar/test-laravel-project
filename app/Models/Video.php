@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Video extends Model {
     use HasFactory ;
     protected $fillable = [
-        'thumbnail' , 'name' , 'slug' , 'description' ,'url' , 'created_at' , 'updated_at' , 'length'
+        'thumbnail' , 'name' , 'slug' , 'description' ,'url' , 'created_at' , 'updated_at' , 'length' , 'category'
     ];
     public function getRouteKeyName()
     {
@@ -28,6 +28,9 @@ class Video extends Model {
     }
     public function findVideos(int $count = 6){
         return Video::all() ;
+    }
+    public function category(){
+        return $this->belongsTo(category::class);
     }
     
 }
