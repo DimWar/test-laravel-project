@@ -6,6 +6,7 @@ use App\Http\Requests\UpdateVideoRequest;
 use App\Models\category;
 use App\Models\Video;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redis;
 use PHPUnit\Framework\Attributes\IgnoreFunctionForCodeCoverage;
 
@@ -26,7 +27,7 @@ class VideoController extends Controller{
         return redirect()->route('index')->with('alert',__('messages.success')) ;
     }
     public function show(Request $request , Video $video){
-        return view('videos.show' , compact('video')) ;
+        return view('videos.show', compact('video')) ;
     }
     
     public function edit(Video $video){

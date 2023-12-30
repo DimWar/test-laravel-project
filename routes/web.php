@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryVideoController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
@@ -27,8 +28,10 @@ Route::get('/videos/create',[VideoController::class,'create'])->name('videos.cre
 
 Route::post('/videos',[VideoController::class,'store'])->name('videos') ;
 
-Route::get('videos/{video:slug}',[VideoController::class,'show'])->name('videos.show');
+Route::get('/videos/{video:slug}',[VideoController::class,'show'])->name('videos.show');
 
-Route::get('videos/{video}/edit',[VideoController::class,'edit'])->name('videos.edit');
+Route::get('/videos/{video}/edit',[VideoController::class,'edit'])->name('videos.edit');
 
-Route::post('videos/{video}',[VideoController::class,'edited'])->name('videos.edited');
+Route::post('/videos/{video}',[VideoController::class,'edited'])->name('videos.edited');
+
+Route::get('/categories/{category}/videos' , [CategoryVideoController::class , 'index'])->name('categories.videos.index') ;

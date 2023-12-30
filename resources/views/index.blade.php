@@ -3,7 +3,7 @@
             <h1 class="new-video-title"><i class="fa fa-bolt"></i> آخرین ویدیو‌ها</h1>
             <div class="row">
                 <!-- video-item -->
-                <x-videoBox  ></x-videoBox>
+                <x-videoBox ></x-videoBox>
                 
                 <!-- // video-item -->
             </div>
