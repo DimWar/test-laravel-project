@@ -26,6 +26,11 @@
                     </div>
                 @endforeach    
              </div>   
+            <div class="text-center">
+            <!-- pagination -->
+             {{ $videos->links() }} 
+            </div>
+             
         
 @endsection
 
